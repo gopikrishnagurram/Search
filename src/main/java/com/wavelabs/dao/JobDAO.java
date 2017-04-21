@@ -7,7 +7,7 @@ import com.wavelabs.utility.Helper;
 
 public class JobDAO {
 
-	public static Boolean PersisetJob(Job job) {
+	public static Boolean persistJob(Job job) {
 		Session session = null;
 		try {
 			session = Helper.getSession();

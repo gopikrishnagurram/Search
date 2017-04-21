@@ -1,0 +1,25 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.hibernate.org/xsd/hibernate-mapping
+        http://www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd">
+	<class name="test.User" table="USER">
+		<id name="id" type="int" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="name"></property>
+		<property name="email" column="email"></property>
+		<property name="phone" column="phone"></property>
+		<property name="type" column="type">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">test.UserType</param>
+				<param name="useNamed">true</param>
+			</type>
+		</property>
+		<property name="jobType" column="jobType">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">test.JobType</param>
+				<param name="useNamed">true</param>
+			</type>
+		</property>
+	</class>
+</hibernate-mapping>

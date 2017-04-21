@@ -1,0 +1,13 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.hibernate.org/xsd/hibernate-mapping
+        http://www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd">
+	<class name="com.wavelabs.utility.Dump" table="dump" lazy="true"
+		dynamic-update="true">
+		<id name="id" type="string" column="id">
+			<generator class="uuid" />
+		</id>
+		<property name="name" column="name" type="string" not-null="true" />
+		<property name="i" column="i" type="int" not-null="true" />
+	</class>
+</hibernate-mapping>

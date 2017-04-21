@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="258781" started-at="2017-04-18T09:25:04Z" finished-at="2017-04-18T09:29:23Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="258781" started-at="2017-04-18T09:25:04Z" finished-at="2017-04-18T09:29:23Z">
+      <class name="com.wavelabs.service.SolrService.SolrServiceTest">
+        <test-method status="PASS" signature="getJobsTest()[pri:0, instance:com.wavelabs.service.SolrService.SolrServiceTest@149e0f5d]" name="getJobsTest" duration-ms="258724" started-at="2017-04-18T14:55:04Z" finished-at="2017-04-18T14:59:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getJobsTest -->
+      </class> <!-- com.wavelabs.service.SolrService.SolrServiceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

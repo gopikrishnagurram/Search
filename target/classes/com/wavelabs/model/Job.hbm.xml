@@ -1,0 +1,25 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.hibernate.org/xsd/hibernate-mapping
+        http://www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd">
+	<class name="com.wavelabs.model.Job" table="JOB" lazy="true" dynamic-update="true">
+		<id name="id" type="int" column="id">
+			<generator class="increment" />
+		</id>
+		<property name="area" column="area" type="string" not-null="true" />
+		<property name="fromTime" column="fromTime" not-null="true" />
+		<property name="toTime" column="toTime" not-null="true" />
+		<property name="salary" column="salary" not-null="true" />
+		<property name="type" column="type" not-null="true">
+			<type name="org.hibernate.type.EnumType">
+				<param name="enumClass">com.wavelabs.model.JobType</param>
+				<param name="useNamed">true</param>
+			</type>
+		</property>
+		<property name="phoneNumber" column="phoneNumber" not-null="true" />
+		<property name="zipCode" column="zipCode" not-null="true"></property>
+		<property name="description" column="description" not-null="true"></property>
+		<many-to-one name="user" column="user_id" class="com.wavelabs.model.User"
+			not-null="true" lazy="false"></many-to-one>
+	</class>
+</hibernate-mapping>

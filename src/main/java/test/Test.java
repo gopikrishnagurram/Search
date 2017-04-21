@@ -1,4 +1,5 @@
-package com.wavelabs.model;
+package test;
+
 
 import java.sql.Time;
 
@@ -13,7 +14,7 @@ public class Test {
 	public static void main(String[] args) {
 
 		Configuration cfg = new Configuration();
-		SessionFactory factory = cfg.configure().buildSessionFactory();
+		SessionFactory factory = cfg.configure("test/Hibernate.cfg.xml").buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
 		User user = new User();
@@ -23,6 +24,7 @@ public class Test {
 		user.setPhone("9032118864");
 		user.setType(UserType.Seeker);
 		user.setJobType(JobType.None);
+		session.save(user);
 		Job job = new Job();
 		job.setArea("A");
 		job.setDescription("DESC");

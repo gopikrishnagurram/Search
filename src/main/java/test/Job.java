@@ -1,12 +1,13 @@
-package com.wavelabs.model;
+package test;
 
 import java.sql.Time;
 
 import org.apache.solr.client.solrj.beans.Field;
 
 public class Job {
+
 	@Field
-	private int id;
+	private String id;
 	@Field
 	private String area;
 	@Field
@@ -25,10 +26,12 @@ public class Job {
 	private String description;
 	@Field
 	private User user;
+
 	public Job() {
 
 	}
-	public Job(int id, String area, Time fromTime, Time toTime, Double salary, JobType type, String phoneNumber,
+
+	public Job(String id, String area, Time fromTime, Time toTime, Double salary, JobType type, String phoneNumber,
 			Long zipCode, String description, User user) {
 		this.id = id;
 		this.area = area;
@@ -56,13 +59,15 @@ public class Job {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	public int getId() {
+
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+
+	public void setId(String id) {
 		this.id = id;
 	}
+
 	public String getArea() {
 		return area;
 	}

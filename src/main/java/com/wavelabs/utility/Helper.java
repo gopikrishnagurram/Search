@@ -1,8 +1,11 @@
 package com.wavelabs.utility;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import com.wavelabs.model.Job;
 
 public class Helper {
 
@@ -32,5 +35,9 @@ public class Helper {
 		factory = cfg.configure().buildSessionFactory();
 		session = factory.openSession();
 		count++;
+	}
+	public static Criteria getJobCritiera() {
+		session = getSession();
+		return session.createCriteria(Job.class);
 	}
 }
